@@ -1,0 +1,130 @@
+@use "@apocrypha/core/scss/apocrypha.scss" as * with (
+  $background-secondary: #292736,
+  $use-bracket-link: true
+);
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+
+// TODO: styles to be imported to apocrypha.css
+
+$purple: #daabda;
+
+html,
+body,
+#root {
+  font-family: Manrope, sans-serif;
+  height: fit-content;
+}
+
+pre {
+  margin: 1rem 1rem 2rem;
+}
+
+code {
+  display: inline;
+}
+
+table {
+  border: thin solid $accent-primary;
+  border-radius: $corner-radius;
+  border-spacing: 0;
+  margin: 1rem;
+}
+
+thead {
+  background: $background-tertiary;
+}
+
+td, th {
+  padding: 0.5rem;
+}
+
+tbody > tr:nth-child(2n + 1) {
+  background: $background-secondary;
+}
+
+tbody > tr:nth-child(2n) {
+  background: $background-tertiary;
+}
+
+pre.oneline {
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 40rem;
+  padding: 0;
+
+  code {
+    display: inline;
+    margin: 0 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    white-space: unset;
+  }
+}
+
+nav.sidebar {
+  background: var(--background-tertiary);
+  display: hidden;
+}
+
+.sidebar-content {
+  display: block;
+  margin: auto;
+  width: 95%;
+}
+
+@media screen and (min-width: 60rem) {
+  nav.sidebar {
+    background: var(--background-tertiary);
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    width: 20rem;
+
+    * {
+      display: block;
+      padding: 1rem;
+    }
+  }
+
+  .sidebar-content {
+    align-self: center;
+    padding-left: 20rem;
+    width: 38rem;
+  }
+}
+
+@media screen and (min-width: 72rem) {
+  .sidebar-content {
+    width: 45rem;
+  }
+}
+
+.img-filter {
+  filter: invert(81%) sepia(31%) saturate(6527%) hue-rotate(312deg)
+    brightness(118%) contrast(99%);
+}
+
+.hljs-name,
+.hljs-selector-pseudo,
+.hljs-built_in {
+  color: $blue;
+}
+
+.hljs-string {
+  color: $green;
+}
+
+.hljs-attr,
+.hljs-variable {
+  color: $yellow;
+}
+
+.hljs-keyword,
+.hljs-number {
+  color: $red;
+}
+
+.hljs-literal {
+  color: $purple;
+}

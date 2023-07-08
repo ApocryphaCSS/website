@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function toggleNavbar(ref: MutableRefObject<any>) {
   const styles = ref.current.style;
-  if (styles.display == "hidden") {
-    styles.display = "unset";
+  if (styles.display == "none") {
+    styles.display = "block";
   } else {
-    styles.display = "hidden";
+    styles.display = "none";
   }
 }
 

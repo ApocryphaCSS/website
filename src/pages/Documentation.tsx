@@ -233,19 +233,19 @@ export default function Documentation() {
                   <td>
                     <code>$accent-success</code>
                   </td>
-                  <tr>
+                  <td>
                     Should be a green color. Indicates an action that succeeded.
                     Documentation-wise, it is used for best practices.
-                  </tr>
+                  </td>
                 </tr>
                 <tr>
                   <td>
                     <code>$accent-success-bg</code>
                   </td>
-                  <tr>
+                  <td>
                     Should be a green color. The background color for
                     success-accented content.
-                  </tr>
+                  </td>
                 </tr>
                 <tr>
                   <td>

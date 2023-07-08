@@ -19,7 +19,7 @@ export default function Documentation() {
           </nav>
         </aside>
 
-        <main className="sidebar-content" style={{ overflowY: "scroll" }}>
+        <main className="sidebar-content">
           <section id="introduction">
             <h1 id="documentation" className="color-primary center-text">
               Documentation

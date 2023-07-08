@@ -1,22 +1,14 @@
-import { MutableRefObject, useRef } from "react";
 import { Link } from "react-router-dom";
 
-function toggleNavbar(ref: MutableRefObject<any>) {
-  const styles = ref.current.style;
-  if (styles.display == "none") {
-    styles.display = "block";
-  } else {
-    styles.display = "none";
-  }
+function toggleNavbar() {
+  document.getElementById("navbar-content")?.classList.toggle("active");
 }
 
 export default function NavBar() {
-  const navbarRef = useRef(null);
-
   return (
     <nav className="navbar">
       <h1>apocrypha.css</h1>
-      <button onClick={() => toggleNavbar(navbarRef)}>
+      <button type="button" onClick={toggleNavbar}>
         <img
           className="img-filter"
           src="https://cdn.snows.world/images/icons/hamburger.svg"
@@ -24,7 +16,7 @@ export default function NavBar() {
         />
       </button>
       <hr />
-      <ul ref={navbarRef}>
+      <ul id="navbar-content">
         <li>
           <Link to="/">Home</Link>
         </li>
